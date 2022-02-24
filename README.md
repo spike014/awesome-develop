@@ -1,34 +1,50 @@
 # awesome-develop
 
-Help you to standardize your project quickly(about code lint, docs, commit meaasge, ...).
+Help you to standardize your project quickly
+(about code lint, docs, commit meaasge, ...).
+
+## required
+
+1. [pre-commit](https://pre-commit.com/)
+
+```sh
+pip install pre-commit
+or
+curl https://pre-commit.com/install-local.py | python -
+or
+brew install pre-commit
+```
+
+## optional
+
+1. [markdownlint-cli](https://github.com/igorshubovych/markdownlint-cli)
+
+  ```sh
+  npm install -g markdownlint-cli
+  ```
 
 ## code lint
 
 - Golang
-  - golangci-lint
+
+  - [golangci-lint](https://github.com/golangci/golangci-lint)
+
+    ```sh
+    golangci-lint run
+    ```
 
 ## docs lint
 
-- markdownlint
+- [markdownlint](https://github.com/DavidAnson/markdownlint)
   
   ```sh
   markdownlint '**/*.md'
   ```
 
-## commit message lint
+## pre-commit with commit message lint and `...`
 
-- commitlint
-
-## ! pre-commit
-
-install pre-commit:
+run after create and edit [.pre-commit-config.yaml](./.pre-commit-config.yaml)
 
 ```sh
-pip install pre-commit
-或者
-curl https://pre-commit.com/install-local.py | python -
-或者
-brew install pre-commit
-并执行(安装编写好的 .pre-commit-config.yaml)
 pre-commit install
 ```
