@@ -15,3 +15,8 @@ repos:
         language: node
         stages: [commit]
         args: ["--ignore", "**/target/**/*.md"]
+
+  - repo: https://github.com/golangci/golangci-lint
+    rev: v1.41.1 # the current latest version
+    hooks:
+      - id: golangci-lint

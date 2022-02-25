@@ -46,5 +46,5 @@ brew install pre-commit
 run after create and edit [.pre-commit-config.yaml](./.pre-commit-config.yaml)
 
 ```sh
-pre-commit install
+pre-commit install && pre-commit install --hook-type commit-msg
 ```
